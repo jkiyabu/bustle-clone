@@ -1,2 +1,6 @@
 
 {{book-add saveBook ="saveBook"}}
+{{#each model as |book|}}
+  {{book-edit book=book destroyBook="destroyBook" update="update"}}
+
+{{/each}}

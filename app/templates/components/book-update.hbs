@@ -1,1 +1,33 @@
-{{yield}}
+
+{{#if updateBookForm}}
+  <h2>New Book</h2>
+  <form class="" action="index.html" method="post">
+    <div class="form-group">
+      <label for="title">Title</label>
+      {{input value=title id="title" class='form-control' placeholder=book.title}}
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author</label>
+      {{input value=author id="author" class='form-control' placeholder=book.author}}
+    </div>
+
+    <div class="form-group">
+      <label for="img">Image URL</label>
+      {{input value=img id="img" class='form-control' placeholder=book.img}}
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      {{input value=description id="description" class='form-control' placeholder=book.description}}
+    </div>
+
+    <div class="form-group">
+      <label for="story">Full Story</label>
+      {{input value=story id="story" class='form-control' placeholder=book.story}}
+    </div>
+    <button{{action 'update' book}}>Update</button>
+  </form>
+{{else}}
+  <button {{action 'updateBookForm' book}} >Update</button>
+{{/if}}
