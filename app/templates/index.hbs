@@ -1,6 +1,10 @@
 
-  {{#each model as |book|}}
-    {{book-tile book=book}}
-  {{/each}}
+{{#each model.announcements as |announcement|}}
+  {{announcement-tile announcement=announcement}}
+{{/each}}
+
+{{#each model.books as |book|}}
+  {{book-tile book=book}}
+{{/each}}
 
 {{#link-to 'admin'}}Admin acces{{/link-to}}
